@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4319C49126789696008ECB24 /* SwiftUI_PersonListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C49026789696008ECB24 /* SwiftUI_PersonListApp.swift */; };
-		4319C49326789696008ECB24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C49226789696008ECB24 /* ContentView.swift */; };
+		4319C49326789696008ECB24 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C49226789696008ECB24 /* StartView.swift */; };
 		4319C49526789698008ECB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4319C49426789698008ECB24 /* Assets.xcassets */; };
 		4319C49826789698008ECB24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4319C49726789698008ECB24 /* Preview Assets.xcassets */; };
+		4319C4A02678C3BD008ECB24 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C49F2678C3BD008ECB24 /* ListView.swift */; };
+		4319C4A22678C5A6008ECB24 /* PersonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C4A12678C5A6008ECB24 /* PersonRow.swift */; };
+		4319C4AA2678C8D2008ECB24 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C4A92678C8D2008ECB24 /* DataManager.swift */; };
+		4319C4AD2678C8F3008ECB24 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319C4AC2678C8F3008ECB24 /* PersonModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4319C48D26789696008ECB24 /* SwiftUI_PersonList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_PersonList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4319C49026789696008ECB24 /* SwiftUI_PersonListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PersonListApp.swift; sourceTree = "<group>"; };
-		4319C49226789696008ECB24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4319C49226789696008ECB24 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		4319C49426789698008ECB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4319C49726789698008ECB24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4319C49926789698008ECB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4319C49F2678C3BD008ECB24 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		4319C4A12678C5A6008ECB24 /* PersonRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRow.swift; sourceTree = "<group>"; };
+		4319C4A92678C8D2008ECB24 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		4319C4AC2678C8F3008ECB24 /* PersonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +60,11 @@
 		4319C48F26789696008ECB24 /* SwiftUI_PersonList */ = {
 			isa = PBXGroup;
 			children = (
-				4319C49026789696008ECB24 /* SwiftUI_PersonListApp.swift */,
-				4319C49226789696008ECB24 /* ContentView.swift */,
-				4319C49426789698008ECB24 /* Assets.xcassets */,
-				4319C49926789698008ECB24 /* Info.plist */,
+				4319C4AF2678C937008ECB24 /* Resources */,
+				4319C4AB2678C8E6008ECB24 /* Models */,
+				4319C4A82678C8C2008ECB24 /* DataManagers */,
+				4319C4A72678C88A008ECB24 /* View */,
+				4319C4AE2678C90C008ECB24 /* Supporting */,
 				4319C49626789698008ECB24 /* Preview Content */,
 			);
 			path = SwiftUI_PersonList;
@@ -67,6 +76,49 @@
 				4319C49726789698008ECB24 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4319C4A72678C88A008ECB24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4319C49226789696008ECB24 /* StartView.swift */,
+				4319C49F2678C3BD008ECB24 /* ListView.swift */,
+				4319C4A12678C5A6008ECB24 /* PersonRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4319C4A82678C8C2008ECB24 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				4319C4A92678C8D2008ECB24 /* DataManager.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		4319C4AB2678C8E6008ECB24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4319C4AC2678C8F3008ECB24 /* PersonModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4319C4AE2678C90C008ECB24 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				4319C49026789696008ECB24 /* SwiftUI_PersonListApp.swift */,
+				4319C49926789698008ECB24 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		4319C4AF2678C937008ECB24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4319C49426789698008ECB24 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4319C49326789696008ECB24 /* ContentView.swift in Sources */,
+				4319C4AD2678C8F3008ECB24 /* PersonModel.swift in Sources */,
+				4319C49326789696008ECB24 /* StartView.swift in Sources */,
+				4319C4AA2678C8D2008ECB24 /* DataManager.swift in Sources */,
+				4319C4A22678C5A6008ECB24 /* PersonRow.swift in Sources */,
 				4319C49126789696008ECB24 /* SwiftUI_PersonListApp.swift in Sources */,
+				4319C4A02678C3BD008ECB24 /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +327,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_PersonList/Preview Content\"";
 				DEVELOPMENT_TEAM = X7L83V7V4P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUI_PersonList/Info.plist;
+				INFOPLIST_FILE = SwiftUI_PersonList/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +349,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_PersonList/Preview Content\"";
 				DEVELOPMENT_TEAM = X7L83V7V4P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUI_PersonList/Info.plist;
+				INFOPLIST_FILE = SwiftUI_PersonList/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
