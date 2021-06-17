@@ -9,18 +9,12 @@ import SwiftUI
 
 struct PersonRow: View {
     @State private var isPresented = false
-    let persons = Person.getContactList()
-    let person: DataManager
-    
+    let fullName: String
     
     var body: some View {
         HStack {
-            Text("Hello")
-            Text("\(persons.count)")
-            Text("")
-            
+            Text("\(fullName)")
         }
-        
     }
 }
 
@@ -30,6 +24,6 @@ struct PersonRow: View {
 
 struct PersonRow_Previews: PreviewProvider {
     static var previews: some View {
-        PersonRow(person: DataManager.shared)
+        PersonRow(fullName: "Василий Пупкин")
     }
 }

@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ListView: View {
+    let contacts: [Person]
+    let title: String
+    
     var body: some View {
-        Text("temp")
-//        PersonRow()
+        List(contacts, id: \.self) { contact in
+            NavigationLink(destination: DetailsView(contact: contact)) {
+                Text("\(contact.fullName)")
+            }
+        }
+        .navigationBarTitle("ntrcn")
     }
+    
 }
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView()
+        ListView(contacts: Person.getContactList(), title: "Ntcn")
     }
 }
+

@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct StartView: View {
+    let persons = Person.getContactList()
+    
     var body: some View {
-        TabView {
-            ListView()
-                .tabItem {
-                    Text("Contacts") }
+        NavigationView {
+            TabView {
+                ListView(contacts: persons, title: "Test")
+                    .tabItem {
+                        Text("Contacts")
+                    }
+                NumbersView()
+                    .tabItem {
+                        Text("Numbers")
+                    }
+            }
+            .navigationBarTitle("Contact List")
         }
     }
 }
